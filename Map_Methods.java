@@ -77,7 +77,7 @@ public class Map_Methods {
     }
     public static void main(String[] args)
     {
-        MyProgram.menu();
+        // MyProgram.menu();
         
         // Test case
         // OutsideMap.startOutside();
@@ -133,7 +133,9 @@ public class Map_Methods {
     //This should work on most IDEs.
     public static void clearScreen()
     {
-        System.out.print("\033[H\033[2J");
+        // System.out.print("\033[H\033[2J");
+        //If it doesn't work:
+        System.out.print("\033\143");
     }
     //Displays health and commands after the map.
     public static void healthAndCommands()
