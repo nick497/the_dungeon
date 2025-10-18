@@ -11,7 +11,7 @@ public class ifStatements {
                 Map_Methods.commandsHelp();
             // ----------- MOVE NORTH -----------
             //Going through the process of converting these to switch statements
-            }else if (Map_Methods.command.equalsIgnoreCase("Move North")) {
+            }else if (Map_Methods.command.equalsIgnoreCase("Move North") || Map_Methods.command.equalsIgnoreCase("N") || Map_Methods.command.equalsIgnoreCase("North")) {
                 if (Map_Methods.classMap.equals("outside")){
                     switch (Map_Methods.currentMap){
                         case "outsideW4":
@@ -23,7 +23,6 @@ public class ifStatements {
                         case "outsideW2":
                             OutsideMap.outsideN1W2();
                             break;
-                            
                         case "outsideW1":
                             OutsideMap.outsideN1W1();
                             break;
@@ -369,6 +368,144 @@ public class ifStatements {
                         case "castle1_N2W1":
                             castle1_N3W1();
                             break;
+                        case "castle1_N2":
+                            castle1_N3();
+                            break;
+                        case "castle1_N2E1":
+                            castle1_N3E1();
+                            break;
+                        case "castle1_N2E2":
+                            castle1_N3E2();
+                            break;
+                        case "castle1_N2E3":
+                            castle1_N3E3();
+                            break;
+                        case "castle1_N2E4":
+                            castle1_N3E4();
+                            break;
+                        case "castle1_N2E5":
+                            castle1_N3E5();
+                            break;
+                        case "castle1_N2E6":
+                            castle1_N3E6();
+                            break;
+                        case "castle1_N3W10":
+                            castle1_N4W10();
+                            break;
+                        case "castle1_N3W9":
+                            castle1_N4W9();
+                            break;
+                        case "castle1_N3W8":
+                            castle1_N4W8();
+                            break;
+                        case "castle1_N3W7":
+                            castle1_N4W7();
+                            break;
+                        case "castle1_N3W6":
+                            castle1_N4W6();
+                            break;
+                        case "castle1_N3W5":
+                            castle1_N4W5();
+                            break;
+                        case "castle1_N3W4":
+                            castle1_N4W4();
+                            break;
+                        case "castle1_N3W3":
+                            castle1_N4W3();
+                            break;
+                        case "castle1_N3W2":
+                            castle1_N4W2();
+                            break;
+                        case "castle1_N3W1":
+                            castle1_N4W1();
+                            break;
+                        case "castle1_N3":
+                            castle1_N4();
+                            break;
+                        case "castle1_N3E1":
+                            castle1_N4E1();
+                            break;
+                        case "castle1_N3E2":
+                            castle1_N4E2();
+                            break;
+                        case "castle1_N3E3":
+                            castle1_N4E3();
+                            break;
+                        case "castle1_N3E4":
+                            castle1_N4E4();
+                            break;
+                        case "castle1_N3E5":
+                            castle1_N4E5();
+                            break;
+                        case "castle1_N3E6":
+                            castle1_N4E6();
+                            break;
+                        case "castle1_N4W10":
+                            castle1_N5W10();
+                            break;
+                        case "castle1_N4W9":
+                            castle1_N5W9();
+                            break;
+                        case "castle1_N4W8":
+                            castle1_N5W8();
+                            break;
+                        case "castle1_N4W7":
+                            castle1_N5W7();
+                            break;
+                        case "castle1_N4W6":
+                            castle1_N5W6();
+                            break;
+                        case "castle1_N4W5":
+                            castle1_N5W5();
+                            break;
+                        case "castle1_N4W4":
+                            castle1_N5W4();
+                            break;
+                        case "castle1_N4W3":
+                            castle1_N5W3();
+                            break;
+                        case "castle1_N4W2":
+                            castle1_N5W2();
+                            break;
+                        case "castle1_N4W1":
+                            castle1_N5W1();
+                            break;
+                        case "castle1_N4":
+                            castle1_N5();
+                            break;
+                        case "castle1_N4E1":
+                            castle1_N5E1();
+                            break;
+                        case "castle1_N4E2":
+                            castle1_N5E2();
+                            break;
+                        case "castle1_N4E3":
+                            castle1_N5E3();
+                            break;
+                        case "castle1_N4E4":
+                            castle1_N5E4();
+                            break;
+                        case "castle1_N4E5":
+                            castle1_N5E5();
+                            break;
+                        case "castle1_N4E6":
+                            castle1_N5E6();
+                            break;
+                        case "castle1_N5W10":
+                            wallMessage();
+                            castle1_N5W10();
+                            break;
+                        case "castle1_N5W9":
+                            wallMessage();
+                            castle1_N5W9();
+                            break;
+                        case "castle1_N5W8":
+                            wallMessage();
+                            castle1_N5W8();
+                            break;
+                        case "castle1_N5W7":
+                            //Go inside door, same with castle1_N5E4
+                            break;
                         default:
                             System.out.println("Error: Unknown location.");
                             break;
@@ -385,8 +522,8 @@ public class ifStatements {
                     }
                 }
             // ----------- MOVE EAST -----------
-            // ----- DONE -----
-            else if (Map_Methods.command.equalsIgnoreCase("Move East")){
+            
+            else if (Map_Methods.command.equalsIgnoreCase("Move East") || Map_Methods.command.equalsIgnoreCase("E") || Map_Methods.command.equalsIgnoreCase("East")) {
                 if (Map_Methods.classMap.equals("outside")){
                     if (Map_Methods.currentMap.equals("outsideW4")){
                         OutsideMap.outsideW3();
@@ -514,7 +651,7 @@ public class ifStatements {
                 }
             // ----------- MOVE SOUTH -----------
             // ----- DONE -----
-            } else if (Map_Methods.command.equalsIgnoreCase("Move South")) {
+            } else if (Map_Methods.command.equalsIgnoreCase("Move South") || Map_Methods.command.equalsIgnoreCase("S") || Map_Methods.command.equalsIgnoreCase("South")) {
                 if (Map_Methods.currentMap.equals("outsideW4")){
                     blockMessage();
                     OutsideMap.outsideW4();
@@ -645,7 +782,7 @@ public class ifStatements {
                 }
             // ----------- MOVE WEST ----------- 
             // ----- DONE -----  
-            }else if (Map_Methods.command.equalsIgnoreCase("Move West")) {
+            }else if (Map_Methods.command.equalsIgnoreCase("Move West") || Map_Methods.command.equalsIgnoreCase("W") || Map_Methods.command.equalsIgnoreCase("West")) {
                 if (Map_Methods.currentMap.equals("outsideE4")){
                     OutsideMap.outsideE3();
                 }else if (Map_Methods.currentMap.equals("outsideE3")){
@@ -787,12 +924,12 @@ public class ifStatements {
             ////////////////////////////////////////////
             //DEV INPUTS, REMOVE LATER//////////////////
             ////////////////////////////////////////////
-            }else if (Map_Methods.command.equals("O LORD GIVE DEVROOM")){
-                dev_room.devRoom();
-                if (Map_Methods.classMap.equals("devRoom")) {
-                    dev_room.handleDevRoomCommand();
-                    //Doesn't work, will debug later.
-                }
+            // }else if (Map_Methods.command.equals("O LORD GIVE DEVROOM")){
+            //     // dev_room.devRoom();
+            //     // if (Map_Methods.classMap.equals("devRoom")) {
+            //     //     dev_room.handleDevRoomCommand();
+            //     //     //Doesn't work, will debug later.
+            //     }
             }else if (Map_Methods.command.equals("O LORD GIVE DEATH")){ //Works fine!
                 Map_Methods.playerDeath();
             // ----------- INVALID INPUT -----------
@@ -804,15 +941,19 @@ public class ifStatements {
 
     // ----- Helper Methods -----
     public static void blockMessage() {
-        System.out.println("The trees are thick here.");
-        System.out.println("You'd get lost trying to go through them.");
-        System.out.println("Press any key to return.");
+        System.out.println("The trees are thick here, you'd get lost trying to go through them\nPress any key to return.");
+        // System.out.println("You'd get lost trying to go through them.");
+        // System.out.println("Press any key to return.");
         Map_Methods.userIn.nextLine();
     }
 
     public static void rubbleMessage() {
-        System.out.println("The way back is blocked by rubble... You can't climb over it.");
-        System.out.println("Press any key to return.");
+        System.out.println("The way back is blocked by rubble... You can't climb over it.\nPress any key to return.");
+        Map_Methods.userIn.nextLine();
+    }
+    
+    public static void wallMessage() {
+        System.out.println("You bump into the wall and fall onto your back.\n...You feel pretty stupid.\nPress any key to return");
         Map_Methods.userIn.nextLine();
     }
     
