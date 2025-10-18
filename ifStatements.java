@@ -342,7 +342,33 @@ public class ifStatements {
                         case "castle1_N2W10":
                             castle1_N3W10();
                             break;
-                        
+                        case "castle1_N2W9":
+                            castle1_N3W9();
+                            break;
+                        case "castle1_N2W8":
+                            castle1_N3W8();
+                            break;
+                        case "castle1_N2W7":
+                            castle1_N3W7();
+                            break;
+                        case "castle1_N2W6":
+                            castle1_N3W6();
+                            break;
+                        case "castle1_N2W5":
+                            castle1_N3W5();
+                            break;
+                        case "castle1_N2W4":
+                            castle1_N3W4();
+                            break;
+                        case "castle1_N2W3":
+                            castle1_N3W3();
+                            break;
+                        case "castle1_N2W2":
+                            castle1_N3W2();
+                            break;
+                        case "castle1_N2W1":
+                            castle1_N3W1();
+                            break;
                         default:
                             System.out.println("Error: Unknown location.");
                             break;
