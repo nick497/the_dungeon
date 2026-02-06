@@ -236,9 +236,6 @@ public class ifStatements {
                 //North commands if the map is castle1.
                 }else if (Map_Methods.classMap.equals("castle1")){
                     switch (Map_Methods.currentMap){
-                        case "castle1_W10":
-                            castle1_N1W10();
-                            break;
                         case "castle1_W9":
                             castle1_N1W9();
                             break;
@@ -287,9 +284,6 @@ public class ifStatements {
                         case "castle1_E6":
                             castle1_N1E6();
                             break;
-                        case "castle1_N1W10":
-                            castle1_N2W10();
-                            break;
                         case "castle1_N1W9":
                             castle1_N2W9();
                             break;
@@ -337,9 +331,6 @@ public class ifStatements {
                             break;  
                         case "castle1_N1E6":
                             castle1_N2E6();
-                            break;
-                        case "castle1_N2W10":
-                            castle1_N3W10();
                             break;
                         case "castle1_N2W9":
                             castle1_N3W9();
@@ -1079,11 +1070,12 @@ public class ifStatements {
                             break;
                     }
                 }
+            }
             
             ////////////////////////////////////
             //MOVE SOUTH////////////////////////
             ////////////////////////////////////
-            } else if (Map_Methods.command.equalsIgnoreCase("Move South") || Map_Methods.command.equalsIgnoreCase("S") || Map_Methods.command.equalsIgnoreCase("South")) {
+            else if (Map_Methods.command.equalsIgnoreCase("Move South") || Map_Methods.command.equalsIgnoreCase("S") || Map_Methods.command.equalsIgnoreCase("South")) {
                 if (Map_Methods.classMap.equals("outside")){
                     switch(Map_Methods.currentMap){
                         case "outsideW4":
@@ -1157,138 +1149,261 @@ public class ifStatements {
                             blockMessage();
                             OutsideMap.outsideN1E6();
                             break;
+                        case "outsideN2W4":
+                            OutsideMap.outsideN1W4();
+                            break;
+                        case "outsideN2W3":
+                            OutsideMap.outsideN1W3();
+                            break;
+                        case "outsideN2W2": //w2
+                            OutsideMap.outsideN1W2();
+                            break;
+                        case "outsideN2W1":
+                            OutsideMap.outsideN1W1();
+                            break;
+                        case "outsideN2":
+                            OutsideMap.outsideN1();
+                            break;
+                        case "outsideN2E1":
+                            OutsideMap.outsideN1E1();
+                            break;
+                        case "outsideN2E6":
+                            OutsideMap.outsideN1E6();
+                            break;
+                        case "outsideN3W4":
+                            OutsideMap.outsideN2W4();
+                            break;
+                        case "outsideN3W3":
+                            OutsideMap.outsideN1W3();
+                            break;
+                        case "outsideN3W2":
+                            OutsideMap.outsideN2W2();
+                            break;
+                        case "outsideN3W1":
+                            OutsideMap.outsideN2W1();
+                            break;
+                        case "outsideN3":
+                            OutsideMap.outsideN2();
+                            break;
+                        case "outsideN3E5":
+                            blockMessage();
+                            OutsideMap.outsideN3E5();
+                            break;
+                        case "outsideN3E6":
+                            OutsideMap.outsideN2E6();
+                            break;
+                        case "outsideN4W3":
+                            OutsideMap.outsideN3W3();
+                            break;
+                        case "outsideN4W2":
+                            OutsideMap.outsideN3W2();
+                            break;
+                        case "outsideN4W1":
+                            OutsideMap.outsideN3W1();
+                            break;
+                        case "outsideN4":
+                            blockMessage();
+                            OutsideMap.outsideN4();
+                            break;
+                        case "outsideN4E5":
+                            OutsideMap.outsideN3E5();
+                            break;
+                        case "outsideN5W2":
+                            OutsideMap.outsideN4W2();
+                            break;
+                        case "outsideN5W1":
+                            OutsideMap.outsideN4W1();
+                            break;
+                        case "outsideN5":
+                            OutsideMap.outsideN4();
+                            break;
+                        case "outsideN5E1":
+                            blockMessage();
+                            OutsideMap.outsideN5E1();
+                            break;
+                        case "outsideN5E2":
+                            blockMessage();
+                            OutsideMap.outsideN5E2();
+                            break;
+                        case "outsideN5E5":
+                            OutsideMap.outsideN4E5();
+                            break;
+                        case "outsideN5E6":
+                            blockMessage();
+                            OutsideMap.outsideN5E6();
+                            break;
+                        case "outsideN5E7":
+                            blockMessage();
+                            OutsideMap.outsideN5E7();
+                            break;
+                        case "outsideN5E8":
+                            blockMessage();
+                            OutsideMap.outsideN5E8();
+                            break;
+                        case "outsideN5E9":
+                            blockMessage();
+                            OutsideMap.outsideN5E9();
+                            break;
+                        case "outsideN6W2":
+                            OutsideMap.outsideN5W2();
+                            break;
+                        case "outsideN6W1":
+                            OutsideMap.outsideN5W1();
+                            break;
+                        case "outsideN6":
+                            OutsideMap.outsideN5();
+                            break;
+                        case "outsideN6E1":
+                            OutsideMap.outsideN5E1();
+                            break;
+                        case "outsideN6E2":
+                            OutsideMap.outsideN5E2();
+                            break;
+                        case "outsideN6E8":
+                            OutsideMap.outsideN5E8();
+                            break;
                         default:
                             System.out.println("Error: Unknown location.");
                             break;
                     }
-                    // outsideLine1 = "TTTTTTTT.....TTTTT.TT"; N6
-                    // outsideLine2 = "TTTTTTT#.....TT.....T"; N5 
-                    // outsideLine3 = "TTTTTTT....TTT#.TTTTT"; N4
-                    // outsideLine4 = "TTTTTT....TTTTT..TTTT"; N3
-                    // outsideLine5 = "TTTTTT......TTTT.TTTT"; N2
-                    // outsideLine6 = "TTTTTT...........TTTT"; N1
-                    // outsideLine7 = "TTTTTT....o....TTTTTT";
-                    // outsideLine8 = "TTTTTTTT#####TTTTTTTT";
-                    //                 W     4321 123456789E
+                }else if (Map_Methods.classMap.equals("castle1")){
+                    switch (Map_Methods.currentMap){
+                        case "castle1_W10":
+                            wallMessage();
+                            castle1_W10();
+                            break;
+                        case "castle1_W9":
+                            wallMessage();
+                            castle1_W9();
+                            break;
+                        case "castle1_W8":
+                            wallMessage();
+                            castle1_W8();
+                            break;
+                        case "castle1_W7":
+                            wallMessage();
+                            castle1_W7();
+                            break;
+                        case "castle1_W6":
+                            wallMessage();
+                            castle1_W6();
+                            break;
+                        case "castle1_W5":
+                            wallMessage();
+                            castle1_W5();
+                            break;
+                        case "castle1_W4":
+                            wallMessage();
+                            castle1_W4();
+                            break;
+                        case "castle1_W3":
+                            wallMessage();
+                            castle1_W3();
+                            break;
+                        case "castle1_W2":
+                            OutsideMap.outsideN6W2();
+                            break;
+                        case "castle1_W1":
+                            OutsideMap.outsideN6W1();
+                            break;
+                        case "castle1":
+                            OutsideMap.outsideN6();
+                            break;
+                        case "castle1_E1":
+                            OutsideMap.outsideN6E1();
+                            break;
+                        case "castle1_E2":
+                            OutsideMap.outsideN6E2();
+                            break;
+                        case "castle1_E3":
+                            wallMessage();
+                            castle1_E3();
+                            break;
+                        case "castle1_E4":
+                            wallMessage();
+                            castle1_E4();
+                            break;
+                        case "castle1_E5":
+                            wallMessage();
+                            castle1_E5();
+                            break;
+                        case "castle1_E6":
+                            wallMessage();
+                            castle1_E6();
+                            break;
+                        case "castle1_N1W10":
+                            castle1_W10();
+                            break;
+                        case "castle1_N1W9":
+                            castle1_W9();
+                            break;
+                        case "castle1_N1W8":
+                            castle1_W8();
+                            break;
+                        case "castle1_N1W7":
+                            castle1_W7();
+                            break;
+                        case "castle1_N1W6":
+                            castle1_W6();
+                            break;
+                        case "castle1_N1W5":
+                            castle1_W5();
+                            break;
+                        case "castle1_N1W4":
+                            castle1_W4();
+                            break;
+                        case "castle1_N1W3":
+                            castle1_W3();
+                            break;
+                        case "castle1_N1W2":
+                            castle1_W2();
+                            break;
+                        case "castle1_N1W1":
+                            castle1_W1();
+                            break;
+                        case "castle1_N1":
+                            castle1();
+                            break;
+                        case "castle1_N1E1":
+                            castle1_E1();
+                            break;
+                        case "castle1_N1E2":
+                            castle1_E2();
+                            break;
+                        case "castle1_N1E3":
+                            castle1_E3();
+                            break;
+                        case "castle1_N1E4":
+                            castle1_E4();
+                            break;
+                        case "castle1_N1E5":
+                            castle1_E5();
+                            break;
+                        case "castle1_N1E6":
+                            castle1_E6();
+                            break;
+                        
+                        
+                        
+                        default:
+                            System.out.println("Error: Unknown Location.");
+                            break;
+                    }
                 }
-                // }else if (Map_Methods.currentMap.equals("startOutside")){
-                //     rubbleMessage();
-                //     OutsideMap.startOutside();
-                // }else if (Map_Methods.currentMap.equals("outsideE1")){
-                //     rubbleMessage();
-                //     OutsideMap.outsideE1();
-                // }else if (Map_Methods.currentMap.equals("outsideE2")){
-                //     rubbleMessage();
-                //     OutsideMap.outsideE2();
-                // }else if (Map_Methods.currentMap.equals("outsideE3")){
-                //     blockMessage();
-                //     OutsideMap.outsideE3();
-                // }else if (Map_Methods.currentMap.equals("outsideE4")){
-                //     blockMessage();
-                //     OutsideMap.outsideE4();
-                // }else if (Map_Methods.currentMap.equals("outsideN1W4")){
-                //     OutsideMap.outsideW4();
-                // }else if (Map_Methods.currentMap.equals("outsideN1W3")){
-                //     OutsideMap.outsideW3();
-                // }else if (Map_Methods.currentMap.equals("outsideN1W2")){
-                //     OutsideMap.outsideW2();
-                // }else if (Map_Methods.currentMap.equals("outsideN1W1")){
-                //     OutsideMap.outsideW1();
-                // }else if (Map_Methods.currentMap.equals("outsideN1")){
-                //     OutsideMap.startOutside();
-                // }else if (Map_Methods.currentMap.equals("outsideN1E1")){
-                //     OutsideMap.outsideE1();
-                // }else if (Map_Methods.currentMap.equals("outsideN1E2")){
-                //     OutsideMap.outsideE2();
-                // }else if (Map_Methods.currentMap.equals("outsideN1E3")){
-                //     OutsideMap.outsideE3();
-                // }else if (Map_Methods.currentMap.equals("outsideN1E4")){
-                //     OutsideMap.outsideE4();
-                // }else if (Map_Methods.currentMap.equals("outsideN1E5")){
-                //     blockMessage();
-                //     OutsideMap.outsideN1E5();
-                // }else if (Map_Methods.currentMap.equals("outsideN1E6")){
-                //     blockMessage();
-                //     OutsideMap.outsideN1E6();
-                // }else if (Map_Methods.currentMap.equals("outsideN2W4")){
-                //     OutsideMap.outsideN1W4();
-                // }else if (Map_Methods.currentMap.equals("outsideN2W3")){
-                //     OutsideMap.outsideN1W3();
-                // }else if (Map_Methods.currentMap.equals("outsideN2W2")){
-                //     OutsideMap.outsideN1W2();
-                // }else if (Map_Methods.currentMap.equals("outsideN2W1")){
-                //     OutsideMap.outsideN1W1();
-                // }else if (Map_Methods.currentMap.equals("outsideN2")){
-                //     OutsideMap.outsideN1();
-                // }else if (Map_Methods.currentMap.equals("outsideN2E1")){
-                //     OutsideMap.outsideN1E1();
-                // }else if (Map_Methods.currentMap.equals("outsideN2E6")){
-                //     OutsideMap.outsideN1E6();
-                // }else if (Map_Methods.currentMap.equals("outsideN3W4")){
-                //     OutsideMap.outsideN2W4();
-                // }else if (Map_Methods.currentMap.equals("outsideN3W3")){
-                //     OutsideMap.outsideN2W3();
-                // }else if (Map_Methods.currentMap.equals("outsideN3W2")){
-                //     OutsideMap.outsideN2W2();
-                // }else if (Map_Methods.currentMap.equals("outsideN3W1")){
-                //     OutsideMap.outsideN2W1();
-                // }else if (Map_Methods.currentMap.equals("outsideN3E5")){
-                //     blockMessage();
-                //     OutsideMap.outsideN3E5();
-                // }else if (Map_Methods.currentMap.equals("outsideN3E6")){
-                //     OutsideMap.outsideN2E6();
-                // }else if (Map_Methods.currentMap.equals("outsideN4W3")){
-                //     OutsideMap.outsideN3W3();
-                // }else if (Map_Methods.currentMap.equals("outsideN4W2")){
-                //     OutsideMap.outsideN3W2();
-                // }else if (Map_Methods.currentMap.equals("outsideN4W1")){
-                //     OutsideMap.outsideN3W1();
-                // }else if (Map_Methods.currentMap.equals("outsideN4")){
-                //     blockMessage();
-                //     OutsideMap.outsideN4();
-                // }else if (Map_Methods.currentMap.equals("outsideN4E5")){
-                //     OutsideMap.outsideN3E5();
-                // }else if (Map_Methods.currentMap.equals("outsideN5W2")){
-                //     OutsideMap.outsideN4W2();
-                // }else if (Map_Methods.currentMap.equals("outsideN5W1")){
-                //     OutsideMap.outsideN4W1();
-                // }else if (Map_Methods.currentMap.equals("outsideN5")){
-                //     OutsideMap.outsideN4();
-                // }else if (Map_Methods.currentMap.equals("outsideN5E1")){
-                //     blockMessage();
-                //     OutsideMap.outsideN5E1();
-                // }else if (Map_Methods.currentMap.equals("outsideN5E2")){
-                //     blockMessage();
-                //     OutsideMap.outsideN5E2();
-                // }else if (Map_Methods.currentMap.equals("outsideN5E5")){
-                //     OutsideMap.outsideN4E5();
-                // }else if (Map_Methods.currentMap.equals("outsideN5E6")){
-                //     blockMessage();
-                //     OutsideMap.outsideN5E6();
-                // }else if (Map_Methods.currentMap.equals("outsideN5E7")){
-                //     blockMessage();
-                //     OutsideMap.outsideN5E7();
-                // }else if (Map_Methods.currentMap.equals("outsideN5E8")){
-                //     blockMessage();
-                //     OutsideMap.outsideN5E8();
-                // }else if (Map_Methods.currentMap.equals("outsideN5E9")){
-                //     blockMessage();
-                //     OutsideMap.outsideN5E9();
-                // }else if (Map_Methods.currentMap.equals("outsideN6W2")){
-                //     OutsideMap.outsideN5W2();
-                // }else if (Map_Methods.currentMap.equals("outsideN6W1")){
-                //     OutsideMap.outsideN5W1();
-                // }else if (Map_Methods.currentMap.equals("outsideN6")){
-                //     OutsideMap.outsideN5();
-                // }else if (Map_Methods.currentMap.equals("outsideN6E1")){
-                //     OutsideMap.outsideN5E1();
-                // }else if (Map_Methods.currentMap.equals("outsideN6E2")){
-                //     OutsideMap.outsideN5E2();
-                // }else if (Map_Methods.currentMap.equals("outsideN6E8")){
-                //     OutsideMap.outsideN5E8();
+            }
+                    // ----------- CASTLE1 MAP -----------
+                    // castle1_1 = "###-##########-###";
+                    // castle1_2 = "|................#"; N5
+                    // castle1_3 = "#................#"; N4
+                    // castle1_4 = "#................#"; N3
+                    // castle1_5 = "#................|"; N2
+                    // castle1_6 = "#................#"; N1
+                    // castle1_7 = "#................#"; 
+                    // castle1_8 = "########=====#####";
+                    //             W1987654321 1234567
             // ----------- MOVE WEST ----------- 
             // ----- DONE -----  
-            }else if (Map_Methods.command.equalsIgnoreCase("Move West") || Map_Methods.command.equalsIgnoreCase("W") || Map_Methods.command.equalsIgnoreCase("West")) {
+            else if (Map_Methods.command.equalsIgnoreCase("Move West") || Map_Methods.command.equalsIgnoreCase("W") || Map_Methods.command.equalsIgnoreCase("West")) {
                 if (Map_Methods.currentMap.equals("outsideE4")){
                     OutsideMap.outsideE3();
                 }else if (Map_Methods.currentMap.equals("outsideE3")){
@@ -1485,6 +1600,17 @@ public class ifStatements {
     // outsideLine7 = "TTTTTT....o....TTTTTT";
     // outsideLine8 = "TTTTTTTT#####TTTTTTTT";
     //                 W     4321 123456789E
+    
+    // ----------- CASTLE1 MAP -----------
+    // castle1_1 = "###-##########-###";
+    // castle1_2 = "|................#"; N5
+    // castle1_3 = "#................#"; N4
+    // castle1_4 = "#................#"; N3
+    // castle1_5 = "#................|"; N2
+    // castle1_6 = "#................#"; N1
+    // castle1_7 = "#................#"; 
+    // castle1_8 = "########=====#####";
+    //             W1987654321 1234567
     //Note-- Line up with cursor for number, I.E next to the crate on N5 would be W2.
     // ----- STUBS FOR CASTLE1 -----
     public static void castle1_W10() {}
@@ -1589,14 +1715,5 @@ public class ifStatements {
     public static void castle1_N5E4() {}
     public static void castle1_N5E5() {}
     public static void castle1_N5E6() {}
-    // ----------- CASTLE1 MAP -----------
-    // castle1_1 = "###-##########-###";
-    // castle1_2 = "|................#"; N5
-    // castle1_3 = "#................#"; N4
-    // castle1_4 = "#................#"; N3
-    // castle1_5 = "#................|"; N2
-    // castle1_6 = "#................#"; N1
-    // castle1_7 = "#................#"; 
-    // castle1_8 = "########=====#####";
-    //             W1987654321 1234567
+    
 }
