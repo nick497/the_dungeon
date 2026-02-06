@@ -1,15 +1,17 @@
-
 public class MyProgram
 {
+    
+///////////////////////////////////////////////////////////
+///TO DO://////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+//REMOVE ALL CASTLE_W10
+//REMOVE ALL CASTLE_E7
+///////////////////////////////////////////////////////////    
     public static void main(String[] args){
         menu();
         // OutsideMap.outsideN6E8();
     }
     public static void menu(){
-        /* 
-        Menu, note that the output for some reason cuts off the 
-        bottom of text, making the underscores look invisible.
-        */
         //Puts the player health back to 100 incase they are restarting from death
         Map_Methods.player.health = 100;
         //Keeps the current map value (In this case the menu):
